@@ -82,7 +82,7 @@
             this.nvsThumbnail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.nvsThumbnail1.Location = new System.Drawing.Point(95, 109);
             this.nvsThumbnail1.Name = "nvsThumbnail1";
-            this.nvsThumbnail1.Size = new System.Drawing.Size(223, 293);
+            this.nvsThumbnail1.Size = new System.Drawing.Size(223, 316);
             this.nvsThumbnail1.TabIndex = 3;
             this.nvsThumbnail1.Text = "nvsThumbnail1";
             // 
@@ -97,7 +97,7 @@
             this.nvsButton1.Location = new System.Drawing.Point(95, 12);
             this.nvsButton1.Name = "nvsButton1";
             this.nvsButton1.Shape = System.Windows.Forms.Border3DSide.Left;
-            this.nvsButton1.Size = new System.Drawing.Size(198, 91);
+            this.nvsButton1.Size = new System.Drawing.Size(223, 91);
             this.nvsButton1.Style = NVS.Components.BevelStyle.Raised;
             this.nvsButton1.TabIndex = 2;
             this.nvsButton1.Text = "Hello World";
@@ -160,6 +160,7 @@
             this.Controls.Add(this.nvsTreeView1);
             this.Name = "Form1";
             this.Text = "Kitchen Sink";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

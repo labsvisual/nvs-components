@@ -13,7 +13,7 @@ namespace NVS.Components
         private Color _currentBaseColor;
         private Color _currentHighlightColor;
 
-        private readonly PictureBox pictureBox;
+        private PictureBox pictureBox;
         
         protected override void OnMouseEnter(EventArgs e)
         {
@@ -40,7 +40,23 @@ namespace NVS.Components
                 throw new FileNotFoundException(filePath);
             }
 
-            this.pictureBox.Image = Image.FromFile(filePath);
+            if(this.pictureBox != null)
+            {
+                this.Controls.Remove(pictureBox);
+                this.pictureBox.Dispose();
+            }
+
+            this.pictureBox = new PictureBox()
+            {
+                Name = "thumbNailBox",
+                Size = new Size(this.ClientRectangle.Size.Width - 16, this.ClientRectangle.Size.Height - 28),
+                Location = new Point(8, 8),
+                Image = Image.FromFile(filePath)
+            };
+
+            this.pictureBox.MouseEnter += pictureBoxMouseEnter;
+            this.pictureBox.MouseLeave += PictureBoxMouseLeave;
+            this.Controls.Add(this.pictureBox);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -61,21 +77,9 @@ namespace NVS.Components
         {
             this._currentHighlightColor = Color.Black;
             this._currentBaseColor = this._primaryBaseColor;
-
-            this.pictureBox = new PictureBox()
-            {
-                Name = "thumbNailBox",
-                Size = new Size(this.ClientRectangle.Size.Width - 16, this.ClientRectangle.Size.Height - 28),
-                Location = new Point(8, 8)
-            };
-
-            this.pictureBox.MouseEnter += pictureBoxMouseEnter;
-            this.pictureBox.MouseLeave += pictureBoxMouseLeave;
-            
-            this.Controls.Add(this.pictureBox);
         }
 
-        private void pictureBoxMouseLeave(object sender, EventArgs e)
+        private void PictureBoxMouseLeave(object sender, EventArgs e)
         {
             this._currentBaseColor = this._primaryBaseColor;
             this._currentHighlightColor = Color.Black;

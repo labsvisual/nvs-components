@@ -21,5 +21,10 @@ namespace KitchenSink
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            nvsThumbnail1.LoadImageThumbnail("C:\\Users\\Shreyansh Pandey\\Downloads\\d.png");
+        }
     }
 }
