@@ -53,6 +53,9 @@
     <Compile Include="Components\NVSTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\RoundedControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Fonts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

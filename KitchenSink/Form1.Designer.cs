@@ -63,6 +63,7 @@
             treeNode16});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
+            this.nvsThumbnail1 = new NVS.Components.NVSThumbnail();
             this.nvsButton1 = new NVS.Components.NVSButton();
             this.nvsTreeView1 = new NVS.Components.NVSTreeView();
             this.SuspendLayout();
@@ -75,6 +76,15 @@
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "NVS.TreeView";
+            // 
+            // nvsThumbnail1
+            // 
+            this.nvsThumbnail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.nvsThumbnail1.Location = new System.Drawing.Point(95, 109);
+            this.nvsThumbnail1.Name = "nvsThumbnail1";
+            this.nvsThumbnail1.Size = new System.Drawing.Size(223, 293);
+            this.nvsThumbnail1.TabIndex = 3;
+            this.nvsThumbnail1.Text = "nvsThumbnail1";
             // 
             // nvsButton1
             // 
@@ -144,6 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nvsThumbnail1);
             this.Controls.Add(this.nvsButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nvsTreeView1);
@@ -159,6 +170,7 @@
         private NVS.Components.NVSTreeView nvsTreeView1;
         private System.Windows.Forms.Label label1;
         private NVS.Components.NVSButton nvsButton1;
+        private NVS.Components.NVSThumbnail nvsThumbnail1;
     }
 }
 
