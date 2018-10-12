@@ -80,15 +80,19 @@
             // 
             this.nvsButton1.BackColor = System.Drawing.Color.Black;
             this.nvsButton1.BorderRadius = 10;
+            this.nvsButton1.DropFactor = 10;
             this.nvsButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nvsButton1.FontSize = 15F;
             this.nvsButton1.ForeColor = System.Drawing.SystemColors.Control;
             this.nvsButton1.Location = new System.Drawing.Point(95, 12);
             this.nvsButton1.Name = "nvsButton1";
+            this.nvsButton1.Shape = System.Windows.Forms.Border3DSide.Left;
             this.nvsButton1.Size = new System.Drawing.Size(198, 91);
+            this.nvsButton1.Style = NVS.Components.BevelStyle.Raised;
             this.nvsButton1.TabIndex = 2;
             this.nvsButton1.Text = "Hello World";
             this.nvsButton1.UseVisualStyleBackColor = true;
+            this.nvsButton1.Click += new System.EventHandler(this.nvsButton1_Click);
             // 
             // nvsTreeView1
             // 

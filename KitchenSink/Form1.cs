@@ -16,5 +16,10 @@ namespace KitchenSink
         {
             InitializeComponent();
         }
+
+        private void nvsButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

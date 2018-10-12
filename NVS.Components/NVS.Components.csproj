@@ -47,6 +47,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\Extensions.cs" />
+    <Compile Include="Components\NVSThumbnail.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\NVSTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
